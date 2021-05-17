@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação de moeda</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <h1>Endereço</h1>
+    <p>Abaixo você pode vereficar seu endereço pelo CEP</p>
+    <label for="CEP">Insira seu CEP</label>
+        
+    
+    <input type="number" value="" id="CEP"> <br> <br>
+    <input type="button" value="Pesquisar" onclick="MD()">  <br> <br>
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        const MD = async () => {
+            var M = document.getElementById("CEP").value
+            const response = await fetch('https://cep.awesomeapi.com.br/json/' + M)
+            const moeda = await response.json()
+            document.getElementById("res").innerHTML = `<strong>Endereço do CEP </strong> <br> <br>
+            CEP:${moeda.cep} <br><br> Endereço: ${moeda.address}<br> <br> Tipo de endereço: ${moeda.address_type}<br> <br>
+            Estado: ${moeda.state} <br> <br> Bairro: ${moeda.district} <br> <br> Cidade: ${moeda.city} <br> <br>
+            DDD: ${moeda.ddd}`
+            
+        }
+
+    </script>
+</body>
+
+</html>

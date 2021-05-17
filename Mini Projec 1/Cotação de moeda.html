@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação de moeda</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <h1>Cotações de Moedas</h1>
+    
+    <label for="slc">Selecione a moeda</label>
+        <select id="slc">
+        <option>USD</option>
+        <option>EUR</option>
+        <option>BTC</option>
+    </select> <br> <br>
+    <input type="button" value="Submit" onclick="MD()"> <br> <br>
+
+    <div id="res">
+
+    </div>
+
+    <script>
+        function MC() {
+            var M = document.getElementById("slc").value
+            document.getElementById("res").innerHTML = M
+            return M
+        }
+        const MD = async () => {
+            var mc = MC()
+            const response = await fetch('https://economia.awesomeapi.com.br/last/' + mc)
+            const moeda = await response.json()
+            if (mc == "USD") {
+                document.getElementById("res").innerHTML = `Valor da moeda em REAL:  R$${moeda.USDBRL.high}`
+            }
+
+            if (mc == "EUR") {
+                document.getElementById("res").innerHTML = `Valor da moeda em REAL: R$${moeda.EURBRL.high}`
+            }
+            if (mc == "BTC") {
+                document.getElementById("res").innerHTML = `Valor da moeda em REAL: R$${moeda.BTCBRL.high}`
+            }
+        }
+
+    </script>
+</body>
+
+</html>
