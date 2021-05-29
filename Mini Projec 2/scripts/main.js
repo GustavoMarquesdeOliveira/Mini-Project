@@ -28,8 +28,8 @@ function age() {
         port: 25 || 465,
         secure: false,
         auth: {
-            user: "gustavomqol@hotmail.com",
-            pass: "s.p.f.c"
+            user: "",
+            pass: ""
         }
     });
     transporter.sendMail({
