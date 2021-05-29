@@ -12,7 +12,7 @@
 
 <body>
     <h1>Cotações de Moedas</h1>
-    
+
     <label for="slc">Selecione a moeda</label>
         <select id="slc">
         <option>USD</option>
@@ -20,6 +20,7 @@
         <option>BTC</option>
     </select> <br> <br>
     <input type="button" value="Submit" onclick="MD()"> <br> <br>
+     
 
     <div id="res">
 
@@ -36,14 +37,13 @@
             const response = await fetch('https://economia.awesomeapi.com.br/last/' + mc)
             const moeda = await response.json()
             if (mc == "USD") {
-                document.getElementById("res").innerHTML = `Valor da moeda em REAL:  R$${moeda.USDBRL.high}`
+                document.getElementById("res").innerHTML = `Valor da moeda em REAL: R$${moeda.USDBRL.high}`
             }
-
             if (mc == "EUR") {
-                document.getElementById("res").innerHTML = `Valor da moeda em REAL: R$${moeda.EURBRL.high}`
+                document.getElementById("res").innerHTML = `<i>Valor da moeda em REAL</i>: R$${moeda.EURBRL.high}`
             }
             if (mc == "BTC") {
-                document.getElementById("res").innerHTML = `Valor da moeda em REAL: R$${moeda.BTCBRL.high}`
+                document.getElementById("res").innerHTML = `<strong>Valor da moeda em REAL</strong>: R$${moeda.BTCBRL.high}`
             }
         }
 

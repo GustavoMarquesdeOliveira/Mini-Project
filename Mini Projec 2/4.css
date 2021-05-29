@@ -1,0 +1,82 @@
+    body {
+        background-color: #101519;
+        font-family: Overlock SC;
+    }
+    
+    .faixa ul li {
+        display: inline-block;
+        padding-right: 4px
+    }
+    
+    .botao {
+        width: 222px;
+        height: 55px;
+        background: #D6A74F 0% 0% no-repeat padding-box;
+        border-radius: 5px;
+        opacity: 1;
+        position: relative;
+        color: #FFFFFF;
+    }
+    
+    .tri {
+        border-left: 650px solid transparent;
+        border-top: 70px solid;
+        border-right: 650px solid transparent;
+        margin-top: 10rem;
+        opacity: 1;
+        width: 1303px;
+        height: 600px;
+        position: relative;
+        background-color: #D6A74F;
+        margin-bottom: -5rem;
+        z-index: -1;
+        border-block-color: #101519;
+    }
+    
+    .in {
+        border: 1px solid #000000;
+        border-radius: 4px;
+        background-color: #D6A74F;
+        opacity: 1;
+        width: 300px;
+    }
+    
+    .inm {
+        border: 1px solid #000000;
+        border-radius: 4px;
+        background-color: #D6A74F;
+        opacity: 1;
+        width: 130px;
+    }
+    
+    .oi {
+        background-color: #D6A74F;
+        border-left: 780px solid transparent;
+        position: relative;
+        width: 867px;
+        border-bottom: 56px solid;
+        border-top: 100px solid;
+        z-index: -1;
+        border-block-color: #101519;
+    }
+    
+    .reserva {
+        border-block: 250px solid;
+        block-size: 20px;
+        border-block-color: #D6A74F;
+        position: relative;
+        width: 850px;
+        margin-left: 14rem;
+        margin-top: -29rem;
+        z-index: -1;
+    }
+    
+    .cardapio {
+        border-block: 250px solid;
+        block-size: 20px;
+        border-block-color: #D6A74F;
+        position: relative;
+        width: 850px;
+        margin-left: 14rem;
+        margin-top: -29rem;
+    }
