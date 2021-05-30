@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 function enviarEmail(e) {
     var EM = document.getElementById("email").value
     var nm = document.getElementById("nome").value
@@ -18,10 +20,10 @@ function sendEmail(EM, nm, qp, dt) {
     Email.send({
 
         Host: "smtp.gmail.com",
-        Username: "doutorgus336@gmail.com",
+        Username: "",
         Password: "dtbelwbowmujhkff",
         To: EM,
-        From: "doutorgus336@gmail.com",
+        From: "",
         Subject: `Yuri Sushis - reserva feita com sucesso`,
         Body: `Nome: ${nm} <br> Email: ${EM} <br> Quantidade de pessoa(s): ${qp} <br> Data: ${dt}`,
     }).then((nm) => window.location.href = 'Yuri3.html');
